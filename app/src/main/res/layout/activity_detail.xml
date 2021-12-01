@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivDetailPageHeaderImage"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="30dp"
+                android:alpha="0.6"
+                android:background="@drawable/bg_gray_strock"
+                android:padding="13sp"
+                android:src="@drawable/back"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/ivHeart"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="30dp"
+                android:alpha="0.6"
+                android:background="@drawable/bg_gray_strock"
+                android:padding="12sp"
+                android:src="@drawable/heart"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineLeft"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="30dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineRight"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="30dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/priceLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+                app:layout_constraintRight_toRightOf="@id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/ivDetailPageHeaderImage">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelinePrice"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.60" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gray_strock"
+                    android:fontFamily="@font/asap"
+                    android:gravity="center"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/time"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toLeftOf="@id/guidelinePrice"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDetailPagePrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cabin_medium"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/guidelinePrice"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDetailPageAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/asap"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/guidelinePrice"
+                    app:layout_constraintTop_toBottomOf="@id/tvDetailPagePrice" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvDetailPageHouseTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/asap"
+                android:text="House Information"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@id/priceLayout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingLeft="20dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDetailPageHouseTitle"
+                tools:listitem="@layout/row_info_list" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/description"
+                android:textSize="14dp"
+                android:paddingBottom="95dp"
+                app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+                app:layout_constraintRight_toRightOf="@id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/rvInfo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/tangaroa"
+        android:drawableLeft="@drawable/ic_email"
+        android:paddingLeft="25dp"
+        android:paddingTop="10dp"
+        android:paddingRight="25dp"
+        android:paddingBottom="10dp"
+        android:text="@string/message"
+        android:textAllCaps="false"
+        app:cornerRadius="50dp"
+        app:drawableTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCall"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/nested" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/tangaroa"
+        android:drawableLeft="@drawable/ic_phone"
+        android:paddingLeft="25dp"
+        android:paddingTop="10dp"
+        android:paddingRight="25dp"
+        android:paddingBottom="10dp"
+        android:text="@string/call"
+        android:textAllCaps="false"
+        app:cornerRadius="50dp"
+        app:drawableTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/nested"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/btnMessage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

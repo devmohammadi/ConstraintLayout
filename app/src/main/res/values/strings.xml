@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ConstraintLayout</string>
+    <string name="city">City</string>
+    <string name="san_francisco">San Francisco</string>
+    <string name="map_view">Map View</string>
+    <string name="time">20 Hours ago</string>
+    <string name="description">Hose press is a leading hose fittings, hydraulic hose and industrial hose distributor for chemical, petroleum, air, and metal hose, hydraulic hose fittings, hose reels, expansion joints, and related accessories.
+        We fabricate and assemble virtually every type of industrial hose today and maintain a large inventory of hydraulic hoses and hose fittings available for immediate shipment.
+        Additionally, we carry a variety of different brands.
+        Click here to view our brand selection of hoses and hose accessories for sale and call us today to find out more about our extensive collection of industrial hoses, hose fittings, hydraulic hoses and hose accessories.
+        Hose press is a leading hose fittings, hydraulic hose and industrial hose distributor for chemical, petroleum, air, and metal hose, hydraulic hose fittings, hose reels, expansion joints, and related accessories.
+        We fabricate and assemble virtually every type of industrial hose today and maintain a large inventory of hydraulic hoses and hose fittings available for immediate shipment.
+        Additionally, we carry a variety of different brands.
+        Click here to view our brand selection of hoses and hose accessories for sale and call us today to find out more about our extensive collection of industrial hoses, hose fittings, hydraulic hoses and hose accessories.</string>
+    <string name="message">Message</string>
+    <string name="call">Call</string>
+</resources>
